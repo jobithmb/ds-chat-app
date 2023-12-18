@@ -2,8 +2,8 @@
 export default {
     // config options
     base : '',
-    // root : './src',
-    // server : {
-    //     port : 3000
-    // }
+    root : './src',
+    server : {
+        port : 3000
+    }
   }
