@@ -4,6 +4,8 @@ A Chat app by DS interns using HTML, CSS and JavaScript involving vite as a part
 ## References 
 https://dribbble.com/shots/5879532-Website-Chat-Design/attachments/11100847?mode=media
 
+![Chat app](https://dribbble.com/shots/5879532-Website-Chat-Design/attachments/11100847?mode=media)
+
 ## Responsibilities:
 
 #### Member-1: Anto Antony
