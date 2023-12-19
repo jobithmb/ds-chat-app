@@ -23,6 +23,7 @@
     background-color: rgb(0, 255, 136);
     height: 100%;
     outline: solid 1px red;
+    background-color: #2F835F;
 
     .top-bar{
       height: 50px;
@@ -50,19 +51,55 @@
           color: #fff;
           width: 32px;
           height: 32px;
-          // outline: solid 1px red;
           line-height: 26px;
           vertical-align: middle;
           cursor: pointer;
+          font-size: 23px;
 
           &.circle{
             background-color: #fff;
             color: #267150;
             border-radius: 100%;
+            text-align: center;
           }
         }
       }
     }
+
+    //side-bar search styles start
+    .search{
+      input{
+        padding: 10px;
+        margin: 20px 25px;
+        width: 80%;
+        height: 28px;
+        background-color: rgb(38, 118, 83);
+        color: rgba(255, 255, 255, 0.957);
+        border: 1px solid rgba(255, 255, 255, 0.387);
+        border-radius: 3px;
+        outline: none;
+      }
+      ::placeholder{
+        color: rgba(255, 255, 255, 0.599);
+
+      }
+     
+      .buttons{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-bottom: 20px;
+          
+        button{
+          background-color: transparent;
+          outline:none;
+          border:none;
+          font-size: 20px;
+          color:rgba(255, 255, 255, 0.826);
+        }
+      }
+    }
+
   }
   .main-content{
     width: 75%;
