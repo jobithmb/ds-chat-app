@@ -25,6 +25,7 @@
     outline: solid 1px red;
     background-color: #2F835F;
 
+
     .top-bar{
       height: 50px;
       display: flex;
@@ -81,7 +82,6 @@
       }
       ::placeholder{
         color: rgba(255, 255, 255, 0.599);
-
       }
      
       .buttons{
@@ -99,11 +99,12 @@
         }
       }
     }
-
   }
   .main-content{
     width: 75%;
     background-color: white;
     height: 100%;
   }
- 
+
+  @import 'components/chatbox.scss'
+
