@@ -4,10 +4,51 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Vite chat App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="chat-app">
+      <div class="side-bar">
+        <div class="top-bar">
+          <div class="logo">
+            <img src="/icon.png" alt="chat-app-logo" class="logoimage">
+          </div>
+          <div class="actions">
+            <div class="action circle">
+              <i class="ri-add-line"></i>
+            </div>
+            <div class="action">
+              <i class="ri-more-2-line"></i>
+            </div>
+          </div>
+        </div>
+        <div class="search">
+          <input type="search">
+          <div class="buttons">
+            <button>
+              <i class="ri-time-line"></i>
+            </button>
+            <button>
+              <i class="ri-group-line"></i>
+            </button>
+            <button>
+              <i class="ri-contacts-book-line"></i>
+            </button>
+          </div>
+        </div>
+        <div class="contacts">
+          <div class="active">
+            <div class="heading">Active Now</div>
+          </div>
+          <div class="idle">
+            <div class="heading">Recent Active Profile</div>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+          
+      </div>
+    </div>
     <script type="module" src="assets/scripts/main.js"></script>
   </body>
 </html>

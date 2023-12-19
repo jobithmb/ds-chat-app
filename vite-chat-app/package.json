@@ -1,5 +1,5 @@
 {
-  "name": "vite-chat-app",
+  "name": "ds-chat-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,6 +9,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "sass": "^1.69.5",
     "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "remixicon": "^3.7.0"
   }
 }
