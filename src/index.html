@@ -8,7 +8,10 @@
   </head>
   <body>
     <div class="chat-app">
+      <!-- section-1: side-bar start -->
       <div class="side-bar">
+
+        <!-- side-bar header start -->
         <div class="top-bar">
           <div class="logo">
             <img src="/icon.png" alt="chat-app-logo" class="logoimage">
@@ -22,8 +25,11 @@
             </div>
           </div>
         </div>
+        <!-- side-bar header end -->
+
+        <!-- side-bar search section start -->
         <div class="search">
-          <input type="search">
+          <input type="search" placeholder="Search">
           <div class="buttons">
             <button>
               <i class="ri-time-line"></i>
@@ -36,6 +42,9 @@
             </button>
           </div>
         </div>
+        <!-- side-bar search section end -->
+
+        <!-- side-bar contact list start -->
         <div class="contacts">
           <div class="active">
             <div class="heading">Active Now</div>
@@ -44,11 +53,43 @@
             <div class="heading">Recent Active Profile</div>
           </div>
         </div>
+        <!-- side-bar contact list end -->
       </div>
-      <div class="main-content">
+      <!-- section-1: side-bar end -->
+
+      <!-- section-2: main-chat-content start -->
+
+      <div class="main-content"> 
+        <!-- Chat header start -->
+        <div class="chat-header">
+            <div class="profile">
+                <div class="image">
+                    <img src="" alt="image">
+                </div>
+                <div class="name">
+                    <p>John Deo</p>
+                </div>
+            </div>
+            <div class="calls">
+                <div class="video-call">
+                    <i class="ri-video-chat-line"></i>
+                </div>
+                <div class="voice-call">
+                    <i class="ri-phone-line"></i>
+                </div>
+                <div class="group-call">
+                    <i class="ri-group-line"></i>
+                </div>
+                <div class="more-option">
+                    <i class="ri-more-2-fill"></i>
+               </div>
+            </div>
+
+        </div>
+      <!-- chat header end -->
+
         <!-- chat-content start -->
         <div class="chat-box">
-        
           <div class="incoming-msg">
               <div class="profile-img">
                 <img src="https://mighty.tools/mockmind-api/content/human/18.jpg" alt ='image' />
@@ -85,13 +126,12 @@
               </div>
           </div>
 
-
           <div class="outgoing-msg">
             <div class="profile-img">
               <img src="https://mighty.tools/mockmind-api/content/human/7.jpg" alt ='image' />
             </div>
             <div class="message">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reiciendis harum voluptatibus assumenda commodi expedita deleniti? </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reiciendis harum </p>
             </div>
             <div class="time">
               <p>12:35 am</p>
@@ -122,9 +162,10 @@
         <!-- chat-content end -->
 
      </div>
-   </div>
+   <!-- chat-content end -->
+    </div>
+  <!-- section-2: main-chat-content end -->
  </div>
-
     <script type="module" src="assets/scripts/main.js"></script>
   </body>
 </html>

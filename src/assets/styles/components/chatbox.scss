@@ -1,10 +1,9 @@
 
-
 .chat-box {
-    padding: 25px;
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    padding:0px 40px;
+    margin-top: 50px;
     overflow-y: auto;
   
     .outgoing-msg, .incoming-msg {
@@ -15,16 +14,16 @@
       align-items: center;
     
         .profile-img img {
-          width: 40px;
-          height: 40px;
+          width: 50px;
+          height: 50px;
           border-radius: 100%;
           
         }
     
         .message {
           background: #f2f2f2;
-          padding: 2px 10px;
           color: rgb(149, 149, 149);
+          padding: 2px 20px;
           font-size: 0.8em;
           height: auto;
         }
@@ -32,9 +31,13 @@
         .time {
           font-size: 0.7em;
           color: rgb(149, 149, 149);
-          padding-right: 20px;
         }
     }
+      
+     .outgoing-msg{
+        flex-direction: row-reverse;
+        align-items: center;
+     }
     
     .outgoing-msg{
       flex-direction: row-reverse;
