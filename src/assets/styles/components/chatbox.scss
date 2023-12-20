@@ -36,6 +36,10 @@
         }
     }
     
+    .outgoing-msg{
+      flex-direction: row-reverse;
+    }
+
       .outgoing-msg .message {
         max-width: 480px; 
         border-radius: 10px;
