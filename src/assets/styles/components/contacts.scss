@@ -1,0 +1,62 @@
+.all-contacts{
+    padding: 10px 20px;
+    .heading {
+        color: #FFF;
+        margin-bottom: 20px;
+    }
+    .idle{
+        margin-top: 70px;
+    }
+    .contacts{
+        padding: 0;
+        list-style-type: none;
+    }
+
+}
+.contacts {
+    padding: 10px;
+    list-style-type: none;
+    .contact{
+        display:flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+
+        &.online {
+            .profile-img::after {
+                background-color: greenyellow;
+
+            }
+        }
+        .profile-img{
+            position: relative;
+            img{
+                height: 50px;
+                width:50px;
+                border-radius: 100%;
+                border: solid 1px greenyellow;
+            }
+            &::after{
+                content: '';
+                display: block;
+                height: 10px;
+                width: 10px;
+                background-color: red;
+                border-radius: 100%;
+                position: absolute;
+                bottom: 8px;
+                right:4px;
+            }
+        }
+        .profile-details {
+            color: #FFF;
+            .name {
+                font-weight: bold;
+                font-size: 16px;
+            }
+            .details {
+                font-size: 12px;
+            }
+        }
+    }
+}
