@@ -1,0 +1,104 @@
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    padding:0px 40px;
+    margin-top: 50px;
+    overflow-y: auto;
+  
+    .outgoing-msg, .incoming-msg {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 15px;
+      align-items: center;
+    
+        .profile-img img {
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
+          
+        }
+    
+        .message {
+          background: #f2f2f2;
+          color: rgb(149, 149, 149);
+          padding: 2px 20px;
+          font-size: 0.8em;
+          height: auto;
+        }
+    
+        .time {
+          font-size: 0.7em;
+          color: rgb(149, 149, 149);
+        }
+    }
+      
+     .outgoing-msg{
+        flex-direction: row;
+        align-items: center;
+     }
+    
+      .outgoing-msg .message {
+        max-width: 480px; 
+        border-radius: 10px;
+      }
+    
+      .incoming-msg .message {
+        min-width: 300px; 
+        border-radius: 30px;
+      }
+    
+      .outgoing-msg {
+        align-self: flex-end; 
+      }
+    
+      .incoming-msg {
+        align-self: flex-start; 
+      }
+  }
+  
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid #F2F2F2 0.5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  .profile {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: 5px;
+    .profile-img img {
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+    }
+  }
+  .options{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    .calls {
+      display: flex;
+      align-items: center;
+      color: #A2A2A2;
+      gap: 25px;
+      padding-right: 40px;
+      .video-call, .voice-call, .group-call{
+        cursor: pointer;
+      }
+    }
+    .more-option {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2F835F;
+        color: white;
+        height: 100%;
+        width: 50px;
+        padding: 0;
+        cursor: pointer;
+    }
+  }
+}

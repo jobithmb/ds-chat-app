@@ -22,7 +22,8 @@
     width: 25%;
     background-color: #2F835F;
     height: 100%;
-    outline: solid 1px red;
+    background-color: #2F835F;
+
 
     .top-bar{
       height: 50px;
@@ -51,62 +52,50 @@
           color: #fff;
           width: 32px;
           height: 32px;
-          // outline: solid 1px red;
           line-height: 26px;
           vertical-align: middle;
           cursor: pointer;
+          font-size: 23px;
 
           &.circle{
             background-color: #fff;
             color: #267150;
             border-radius: 100%;
+            text-align: center;
           }
         }
       }
     }
 
+    //side-bar search styles start
     .search{
-      padding: 10px 20px;
-      margin-bottom: 20px;
-
-      .search-icon{
-        position: absolute;
-        left: 10px; /* Adjust the left position as needed */
-        top: 50%;
-        transform: translateY(-50%);
-        color: #333; /* Set the color of the icon */
-        font-size: 18px; /* Set the font size of the icon */
-      }
-      .ri-search-line {
-        color: #333; /* Set the color of the icon */
-        font-size: 18px; /* Set the font size of the icon */
-        margin-right: 5px; /* Add some right margin for spacing */
-    }
-      input {
-        width: 100%;
-        margin-bottom: 20px;
-        font-size: 16px;
-        background-color: #2F835F;
-        color: #fff;
-        border: solid 1px #3B9771;
+      input{
         padding: 10px;
-        height: 40px;
-        border-radius: 2px;
-
-        &::placeholder{
-          color: #A5BFB2;
-        }
+        margin: 20px 25px;
+        width: 80%;
+        height: 28px;
+        background-color: rgb(38, 118, 83);
+        color: rgba(255, 255, 255, 0.957);
+        border: 1px solid rgba(255, 255, 255, 0.387);
+        border-radius: 3px;
+        outline: none;
       }
-
+      ::placeholder{
+        color: rgba(255, 255, 255, 0.599);
+      }
+     
       .buttons{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-
-        .button{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-bottom: 10px;
+          
+        button{
+          background-color: transparent;
+          outline:none;
+          border:none;
           font-size: 20px;
-          color: #C7D8CF;
+          color:rgba(255, 255, 255, 0.826);
           cursor: pointer;
         }
       }
@@ -117,4 +106,5 @@
     background-color: white;
     height: 100%;
   }
- 
+  @import 'components/chatbox.scss';
+
