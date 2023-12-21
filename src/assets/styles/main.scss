@@ -18,15 +18,17 @@
     height: 100vh;
     display: flex;
   }
+
+  // side-bar start
   .side-bar{
     width: 25%;
     background-color: #2F835F;
     height: 100%;
     background-color: #2F835F;
 
-
+    // side-bar header start
     .top-bar{
-      height: 50px;
+      height: 53px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -34,10 +36,7 @@
       color: #fff;
       padding: 5px 10px;
       margin-bottom: 20px;
-
       .logo{
-
-
         .logoimage{
           width: 35px;
           height: 35px;
@@ -46,14 +45,12 @@
       .actions{
         display: flex;
         gap: 10px;
-
+      
         .action{
           font-size: 32px;
           color: #fff;
           width: 32px;
           height: 32px;
-          line-height: 26px;
-          vertical-align: middle;
           cursor: pointer;
           font-size: 23px;
 
@@ -62,14 +59,29 @@
             color: #267150;
             border-radius: 100%;
             text-align: center;
+            line-height: 30px;
+            vertical-align: middle;
           }
+          
         }
+        
+       
+        .ef:hover{
+          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        }
+        .ef:active{
+          box-shadow:none;
+          transform: scale(0.9);
+        }
+        
       }
     }
+    // side-bar header end
+
 
     //side-bar search styles start
     .search{
-      padding: 10px 20px;
+      padding: 5px 30px;
       margin-bottom: 20px;
       input{
         height: 40px;
@@ -81,11 +93,20 @@
         color: #FFF;
         border: solid 1px #3B9771;
         border-radius: 2px;
+        outline: none;
+        
       }
       ::placeholder{
         color: #A5BFB2;
       }
-     
+      input:hover{
+        border:1px solid rgba(48, 163, 113, 0.605);
+      }
+      input:focus{
+        // box-shadow: rgba(49, 70, 46, 0.05) 0px 1px 0px, rgba(38, 69, 46, 0.1) 0px 0px 8px;
+        border: solid 1px #45ae82ef;
+        // border: none;
+      }
       .buttons{
         display: flex;
         gap: 10px;
@@ -96,6 +117,12 @@
           font-size: 20px;
           color: #C7D8CF;
           cursor: pointer;
+        }
+        .button:hover{
+          transform: scale(1.1);
+        }
+        .button:active{
+          transform: scale(1);
         }
       }
     }
