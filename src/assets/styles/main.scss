@@ -52,8 +52,6 @@
           color: #fff;
           width: 32px;
           height: 32px;
-          line-height: 26px;
-          vertical-align: middle;
           cursor: pointer;
           font-size: 23px;
 
@@ -62,6 +60,9 @@
             color: #267150;
             border-radius: 100%;
             text-align: center;
+            line-height: 30px;
+            vertical-align: middle;
+
           }
         }
       }
@@ -81,6 +82,7 @@
         color: #FFF;
         border: solid 1px #3B9771;
         border-radius: 2px;
+        outline: none;
       }
       ::placeholder{
         color: #A5BFB2;
