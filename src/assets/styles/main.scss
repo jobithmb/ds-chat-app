@@ -36,11 +36,12 @@
       margin-bottom: 20px;
 
       .logo{
-
+        padding-left: 20px;
 
         .logoimage{
           width: 35px;
           height: 35px;
+          filter: invert(1);
         }
       }
       .actions{
@@ -106,4 +107,5 @@
     height: 100%;
   }
   @import 'components/chatbox.scss';
+  @import 'components/contacts.scss';
 
