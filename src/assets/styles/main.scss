@@ -20,7 +20,7 @@
   }
   .side-bar{
     width: 25%;
-    background-color: rgb(0, 255, 136);
+    background-color: #2F835F;
     height: 100%;
     background-color: #2F835F;
 
@@ -33,6 +33,7 @@
       background-color: #267150;
       color: #fff;
       padding: 5px 10px;
+      margin-bottom: 20px;
 
       .logo{
 
@@ -105,6 +106,5 @@
     background-color: white;
     height: 100%;
   }
-
   @import 'components/chatbox.scss';
 
