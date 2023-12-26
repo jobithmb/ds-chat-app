@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.3.1",
     "sass": "^1.69.5",
     "vite": "^5.0.8"
   },

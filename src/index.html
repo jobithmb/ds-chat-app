@@ -31,20 +31,23 @@
         <div class="search">
           <input type="search"  placeholder="Search here">
           <div class="buttons">
-            <div class="button">
+            <div class="button active" data-target="recent">
               <i class="ri-time-line"></i>
             </div>
-            <div class="button">
+            <div class="button" data-target="groups">
               <i class="ri-group-line"></i>
             </div>
-            <div class="button">
+            <div class="button" data-target="contacts">
               <i class="ri-contacts-book-line"></i>
             </div>
           </div>
         </div>
         <!-- side-bar search section end -->
 
-        <!-- side-bar contact list start -->
+       <!-- Tabs section start-->
+         <div class="tabs">
+          <div class="tab active" data-name ="recent">
+                <!-- side-bar contact list start -->
         <div class="all-contacts">
 
           <!-- Active chat list start -->
@@ -74,7 +77,7 @@
                   </div>
                 </li>
               </ul>
-            </div>
+            </div> 
           <!-- Active chat list end -->
 
           <!-- Inactive chat list start -->
@@ -107,6 +110,14 @@
               </div>
           <!-- Inactive chat list end -->
         </div>
+          </div>
+          <div class="tab" data-name="groups">groups</div>
+          <div class="tab" data-name="contacts">
+            
+          </div>
+         </div>
+       <!-- tabs section end -->
+      
         <!-- side-bar contact list end -->
         </div>
       <!-- section-1: side-bar end -->
