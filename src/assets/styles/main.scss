@@ -120,13 +120,24 @@
           font-size: 20px;
           color: #C7D8CF;
           cursor: pointer;
+          padding: 0px 5px;
+       
+          border-radius: 100%;
+          transition: all ease-in-out 0.2s;
+
+            &.active,
+            &:hover{
+              background-color: #FFF;
+              color: #3B9771;
+            }
+
         }
-        .button:hover{
-          transform: scale(1.1);
-        }
-        .button:active{
-          transform: scale(1);
-        }
+        // .button:hover{
+        //   transform: scale(1.1);
+        // }
+        // .button:active{
+        //   transform: scale(1);
+        // }
       }
     }
   }
@@ -135,6 +146,8 @@
     background-color: white;
     height: 100%;
   }
+
   @import 'components/chatbox.scss';
   @import 'components/contacts.scss';
+  @import 'components/tabs.scss';
 
