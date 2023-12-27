@@ -11,6 +11,7 @@ for (let i = 0; i< 10; i++){
        new Contact(
         faker.person.firstName(),
         faker.person.lastName(),
+        faker.phone.number(),
         faker.image.avatar(),
         faker.datatype.boolean(0.75)
        )
@@ -18,7 +19,7 @@ for (let i = 0; i< 10; i++){
 }
 
 // Dynamic contacts in contacts tab
-const contactList = document.getElementById('contacts-list');
+const contactList = document.getElementById('contact-list');
 let contactHTML = '';
 contacts.forEach(contact =>{
     contactHTML += `
@@ -27,9 +28,9 @@ contacts.forEach(contact =>{
                         <img src="${contact.picture}" alt="">
                       </div>
                       <div class="profile-details">
-                        <div class="name">${contact.getFullname()}</div>
-                        <div class="details">
-                          Lorem ipsum dolor consectetur.
+                        <div class="name">${contact.getfullName()}</div>
+                        <div class="number">
+                          ${contact.number}
                         </div>
                       </div>
         </li>

@@ -1,14 +1,19 @@
+
 export default class Contact{
-    firstName = null;
-    lastName = null;
-    picture = null;
-    IsOnline = false;
+  firstName = null;
+  lastName = null;
+  number =null;
+  picture = null;
+  IsOnline = false;
 
-      constructor(firstName,lastName,picture,IsOnline = false){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.picture = picture;
-        this.IsOnline = IsOnline;
-      }
-
+    constructor(firstName,lastName,number,picture,IsOnline = false){
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.number = number;
+      this.picture = picture;
+      this.IsOnline = IsOnline;
+    }
+    getfullName(){
+      return ` ${this.firstName} ${this.lastName}`
+     }
 }
