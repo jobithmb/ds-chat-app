@@ -23,8 +23,8 @@ for (let i = 0; i< 10; i++){
 
 
 // Dynamic contacts in contacts tab
-const contactList = document.getElementById('contact-list');
-let contactHTML ='';
+const contactList = document.getElementById('contacts-list');
+let contactHTML = '';
 contacts.forEach(contact =>{
     contactHTML += `
         <li class = "contact ${contact.IsOnline? 'online' : 'offline'}">
@@ -37,7 +37,7 @@ contacts.forEach(contact =>{
                           Lorem ipsum dolor consectetur.
                         </div>
                       </div>
-                    </li>
+        </li>
     `
 })
 contactList.innerHTML = contactHTML
