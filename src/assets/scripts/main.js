@@ -6,6 +6,7 @@ import './tabs'
 import Contact from './contacts'
 import { faker } from '@faker-js/faker'
 
+
 let contacts = [];
 for (let i = 0; i< 10; i++){
     contacts.push (
@@ -13,21 +14,20 @@ for (let i = 0; i< 10; i++){
         faker.person.firstName(),
         faker.person.lastName(),
         faker.image.avatar(),
-        faker.datatype.boolean(0.75)
+        faker.datatype.boolean(0.5)
        )
     )
 }
-
 const contactList = document.getElementById('contacts-list');
 let ListItems = '';
 contacts.forEach(contact => {
     ListItems += `
-        <li class="contact ${contact.IsOnline ? 'online':'offline'}>
+        <li class="contact ${contact.IsOnline ? 'online' : 'offline' }">
             <div class="profile-img">
             <img src="${contact.picture}" alt="Image">
             </div>
             <div class="profile-details">
-            <div class="name">${contact.firstName}</div>
+            <div class="name">${contact.getFullname()}</div>
             <div class="details">
                 Lorem ipsum dolor, sit amet consectetur.
             </div>
