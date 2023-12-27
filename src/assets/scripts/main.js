@@ -18,22 +18,3 @@ for (let i = 0; i< 10; i++){
        )
     )
 }
-const contactList = document.getElementById('contacts-list');
-let ListItems = '';
-contacts.forEach(contact => {
-    ListItems += `
-        <li class="contact ${contact.IsOnline ? 'online' : 'offline' }">
-            <div class="profile-img">
-            <img src="${contact.picture}" alt="Image">
-            </div>
-            <div class="profile-details">
-            <div class="name">${contact.getFullname()}</div>
-            <div class="details">
-                Lorem ipsum dolor, sit amet consectetur.
-            </div>
-            </div>
-        </li>
-    `
-});
-
-contactList.innerHTML = ListItems
