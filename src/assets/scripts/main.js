@@ -15,12 +15,11 @@ for (let i = 0; i< 10; i++){
         faker.datatype.boolean(0.75)
        )
     )
-
 }
 
 // Dynamic contacts in contacts tab
-const contactList = document.getElementById('contact-list');
-let contactHTML ='';
+const contactList = document.getElementById('contacts-list');
+let contactHTML = '';
 contacts.forEach(contact =>{
     contactHTML += `
         <li class = "contact ${contact.IsOnline? 'online' : 'offline'}">
@@ -28,13 +27,12 @@ contacts.forEach(contact =>{
                         <img src="${contact.picture}" alt="">
                       </div>
                       <div class="profile-details">
-                        <div class="name">${contact.firstName}</div>
+                        <div class="name">${contact.getFullname()}</div>
                         <div class="details">
                           Lorem ipsum dolor consectetur.
                         </div>
                       </div>
-                    </li>
+        </li>
     `
 })
 contactList.innerHTML = contactHTML
-
