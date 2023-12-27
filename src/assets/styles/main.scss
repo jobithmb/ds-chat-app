@@ -25,7 +25,6 @@
     background-color: #2F835F;
     height: 100%;
     background-color: #2F835F;
-    overflow-y: auto;
 
     // side-bar header start
     .top-bar{
@@ -87,7 +86,6 @@
     .search{
       padding: 5px 30px;
       margin-bottom: 20px;
-      
       input{
         height: 40px;
         width: 100%;
@@ -117,7 +115,7 @@
         gap: 10px;
         justify-content: space-between;
         align-items: center;
-       
+          
         .button{
           font-size: 20px;
           color: #C7D8CF;
@@ -151,5 +149,5 @@
 
   @import 'components/chatbox.scss';
   @import 'components/contacts.scss';
-  // @import 'components/tabs.scss';
+  @import 'components/tabs.scss';
 
