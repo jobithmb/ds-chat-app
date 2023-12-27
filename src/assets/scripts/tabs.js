@@ -10,8 +10,7 @@ const tabs = document.querySelectorAll('.tabs .tab')
 
         tabs.forEach(tab => tab.classList = 'tab');
         const tab = document.querySelector(`.tab[data-name="${target}"]`);
-        console.log(tab)
-        tab.classList = 'tab active'
-
+        console.log(tab);
+        tab.classList = "tab active";
     }
      ))
