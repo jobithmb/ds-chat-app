@@ -1,12 +1,9 @@
 import '../styles/main.scss'
 import 'remixicon/fonts/remixicon.css'
 import './tabs'
-
-
 import Contact from './contacts'
 import { faker } from '@faker-js/faker'
 import '../styles/components/contacts.scss'
-
 
 let contacts = [];
 for (let i = 0; i< 10; i++){
@@ -15,12 +12,10 @@ for (let i = 0; i< 10; i++){
         faker.person.firstName(),
         faker.person.lastName(),
         faker.image.avatar(),
-        faker.datatype.boolean(0.5)
+        faker.datatype.boolean(0.75)
        )
     )
 }
-
-
 
 // Dynamic contacts in contacts tab
 const contactList = document.getElementById('contacts-list');
@@ -41,6 +36,3 @@ contacts.forEach(contact =>{
     `
 })
 contactList.innerHTML = contactHTML
-
-
-
