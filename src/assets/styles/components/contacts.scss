@@ -1,11 +1,15 @@
 .all-contacts{
-    padding: 10px 20px;
+    padding:  10px;
     .heading {
         color: #FFF;
         margin-bottom: 20px;
     }
     .idle{
         margin-top: 70px;
+        .heading {
+            color: #FFF;
+            margin-bottom: 20px;
+        }
     }
     .contacts{
         padding: 0;
@@ -14,7 +18,7 @@
 
 }
 .contacts {
-    padding: 10px;
+    padding:0px 10px;
     list-style-type: none;
     .contact{
         display:flex;
@@ -31,8 +35,8 @@
         .profile-img{
             position: relative;
             img{
-                height: 50px;
-                width:50px;
+                height: 45px;
+                width:45px;
                 border-radius: 100%;
                 border: solid 1px greenyellow;
             }
@@ -59,4 +63,5 @@
             }
         }
     }
+   
 }
