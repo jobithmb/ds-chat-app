@@ -11,6 +11,7 @@ function activeTab(target){
     }
 }
 
+
  buttons.forEach(button =>
     button.addEventListener('click',(e) => {
         const parent = e.target.parentNode;
@@ -20,5 +21,6 @@ function activeTab(target){
 
         const target = parent.getAttribute('data-target');
         activeTab(target);
+
     }
      ))
