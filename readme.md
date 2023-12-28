@@ -6,17 +6,19 @@ https://dribbble.com/shots/5879532-Website-Chat-Design/attachments/11100847?mode
 
 ![Chat app](https://cdn.dribbble.com/users/1349161/screenshots/5879532/media/6774560990e5a433cb3e48cef598718c.jpg)
 
-## Responsibilities:
+## Contributions:
 
 #### Member-1: Anto Antony
 * Chat-list(side bar) header(HTML,CSS)
 #### Member-2: Ramya S
-* Chat-list content(HTML,CSS)
+* Chat-list content(CSS)
 #### Member-3: Susheela R
-* Chat content header(HTML,CSS)
+* Chat content header(CSS)
 #### Member-4: Bhavya Shree
-* Chat content(HTML,CSS)
+* Chat content header(HTML), chat content(HTML,CSS), Tab swapping functionality.
 #### Member-5: Melza Geno
-* Chat content(HTML,CSS)
+* Chat-list content(HTML), Rendering Contacts using faker
 #### Member-6: Georgin Reji
-* Displaying selected chat dynamically(JavaScript)
+* Add functionality
+#### Member-6: Akil Varghese
+* Contact Sort functionality
