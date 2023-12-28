@@ -20,5 +20,5 @@ https://dribbble.com/shots/5879532-Website-Chat-Design/attachments/11100847?mode
 * Chat-list content(HTML), Rendering Contacts using faker
 #### Member-6: Georgin Reji
 * Add functionality
-#### Member-6: Akil Varghese
+#### Member-7: Akil Varghese
 * Contact Sort functionality
