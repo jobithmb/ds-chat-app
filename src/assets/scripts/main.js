@@ -1,10 +1,10 @@
 import '../styles/main.scss'
 import 'remixicon/fonts/remixicon.css'
 import './tabs'
+
 import Contact from './contacts'
 import { faker } from '@faker-js/faker'
 import '../styles/components/contacts.scss'
-import './delete'
 
 let contacts = [];
 for (let i = 0; i< 10; i++){
@@ -40,11 +40,10 @@ contacts.forEach(contact =>{
     `
 })
 contactList.innerHTML = contactHTML
-console.log(contacts)
+
 
 
 // delete functionality start
-const deleteBtn = document.getElementById('deleteBtn');
 document.addEventListener('click', function (event) {
   if (event.target.classList.contains('ri-delete-bin-6-line')) {
       const contactId = event.target.getAttribute('data-contact-id');
@@ -64,9 +63,7 @@ function delete_contact(id){
       rowToRemove.parentElement.removeChild(rowToRemove);
       console.log(rowToRemove);
   }
-  // saveContactToLocalStorage();
 }
-
 // delete functionality end
 
 
