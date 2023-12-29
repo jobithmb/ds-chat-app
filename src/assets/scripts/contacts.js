@@ -15,7 +15,7 @@ export default class Contact{
       this.picture = picture;
       this.IsOnline = IsOnline;
     }
-    getfullName(){
+    getFullName(){
       return ` ${this.firstName} ${this.lastName}`
      }
 }
