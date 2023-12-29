@@ -11,7 +11,6 @@ let contacts = [];
 for (let i = 0; i< 10; i++){
     contacts.push (
        new Contact(
-        new Date().getTime(),
         faker.person.firstName(),
         faker.person.lastName(),
         faker.phone.number(),
@@ -27,7 +26,7 @@ const contactList = document.getElementById('contacts-list')
 let contactHTML = '';
 contacts.forEach(contact =>{
     contactHTML += `
-        <li id="${contact.id}" class = "contact ${contact.IsOnline? 'online' : 'offline'}">
+        <li id="${contact.number}" class = "contact ${contact.IsOnline? 'online' : 'offline'}">
                       <div class="profile-img">
                         <img src="${contact.picture}" alt="Image">
                       </div>
@@ -37,7 +36,7 @@ contacts.forEach(contact =>{
                           ${contact.number}
                         </div>
                       </div>
-                        <button id="deleteBtn" class="deleteBtn"><i class="ri-delete-bin-6-line" data-contact-id="${contact.id}"></i></button>
+                        <button id="deleteBtn" class="deleteBtn"><i class="ri-delete-bin-6-line" data-contact-id="${contact.number}"></i></button>
         </li>
     `
 })
