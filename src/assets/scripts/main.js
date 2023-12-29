@@ -25,7 +25,7 @@ const contactList = document.getElementById('contact-list');
 let contactHTML = '';
 contacts.forEach(contact =>{
     contactHTML += `
-        <li class = "contact ${contact.IsOnline? 'online' : 'offline'}">
+        <li id="${contact.id}" class = "contact ${contact.IsOnline? 'online' : 'offline'}">
                       <div class="profile-img">
                         <img src="${contact.picture}" alt="">
                       </div>
@@ -35,7 +35,7 @@ contacts.forEach(contact =>{
                           ${contact.number}
                         </div>
                       </div>
-                        <button id="deleteBtn" class="deleteBtn"  ><i class="ri-delete-bin-6-line" data-contact-id="${contact.id}"></i></button>
+                        <button id="deleteBtn" class="deleteBtn"><i class="ri-delete-bin-6-line" data-contact-id="${contact.id}"></i></button>
         </li>
     `
 })
@@ -43,32 +43,30 @@ contactList.innerHTML = contactHTML
 console.log(contacts)
 
 
-// delete function
+// delete functionality start
 const deleteBtn = document.getElementById('deleteBtn');
-deleteBtn.addEventListener('click', function (event) {
+document.addEventListener('click', function (event) {
   if (event.target.classList.contains('ri-delete-bin-6-line')) {
       const contactId = event.target.getAttribute('data-contact-id');
-      // console.log(contactId);
       if (contactId) {
-        // console.log(contactId)
           delete_contact(contactId);
       }
   }
 });
 
-// delete function
+
 function delete_contact(id){
   contacts = contacts.filter(contact => {
       return contact.id != id;
   });
   const rowToRemove = document.getElementById(id);
   if (rowToRemove && confirm("Are you sure ?")) {
-      // rowToRemove.parentElement.removeChild(rowToRemove);
+      rowToRemove.parentElement.removeChild(rowToRemove);
       console.log(rowToRemove);
-      alert('delete')
   }
-  // saveTaskToLocalStorage();
+  // saveContactToLocalStorage();
 }
 
+// delete functionality end
 
 
