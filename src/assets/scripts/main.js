@@ -18,6 +18,7 @@ for (let i = 0; i< 10; i++){
     )
 }
 
+contacts.sort((a, b) => a.firstName.localeCompare(b.firstName))
 // Dynamic contacts in contacts tab
 const contactList = document.getElementById('contact-list');
 let contactHTML = '';
@@ -36,4 +37,43 @@ contacts.forEach(contact =>{
         </li>
     `
 })
-contactList.innerHTML = contactHTML
+contactList.innerHTML = contactHTML;
+
+function loadRecentContacts(contacts) {
+  console.log('inn')
+  const contactsOnline = document.getElementById('active-contacts');
+  const contactsOffline = document.getElementById('idle-contacts');
+  let contactsOnlineHTML = ``;
+  let contactsOfflineHTML = ``;
+  let noContactHTML = ``;
+  contacts.forEach(contact => {
+    if (contact.IsOnline) {
+      contactsOnlineHTML += `<li class="contact online">
+      <div class="profile-img">
+        <img src="${contact.picture}" alt="">
+      </div>
+      <div class="profile-details">
+        <div class="name">${contact.getfullName()}</div>
+        <div class="details">
+        ${contact.number}
+        </div>
+      </div>
+    </li>`
+    } else {
+      contactsOfflineHTML += `<li class="contact offline">
+      <div class="profile-img">
+        <img src="${contact.picture}" alt="">
+      </div>
+      <div class="profile-details">
+        <div class="name">${contact.getfullName()}</div>
+        <div class="details">
+        ${contact.number}
+        </div>
+      </div>
+    </li>`
+    }
+    contactsOnline.innerHTML = contactsOnlineHTML;
+    contactsOffline.innerHTML = contactsOfflineHTML;
+  });
+}
+loadRecentContacts(contacts);
