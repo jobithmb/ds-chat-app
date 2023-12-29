@@ -29,7 +29,7 @@
 
         <!-- side-bar search section start -->
         <div class="search">
-          <input type="search"  placeholder="Search here">
+          <input type="search" id ='searchInput' placeholder="Search here">
           <div class="buttons">
             <div class="button active" data-target="recent">
               <i class="ri-time-line"></i>
@@ -46,81 +46,91 @@
 
        <!-- Tabs section start-->
          <div class="tabs">
+          <!-- recent tab -->
           <div class="tab active" data-name ="recent">
-            <!-- side-bar contact list start -->
+            <!-- side-bar contact list start -->  
             <div class="all-contacts">
               <!-- Active chat list start -->
                 <div class="active">
-                  <div class="heading">Active Now</div>
-                  <ul class="contacts">
-                    <li class="contact online">
-                      <div class="profile-img">
-                        <img src="https://mighty.tools/mockmind-api/content/human/69.jpg" alt="">
-                      </div>
-                      <div class="profile-details">
-                        <div class="name">John Doe</div>
-                        <div class="details">
-                          Lorem ipsum dolor, sit amet consectetur.
-                        </div>
-                      </div>
-                    </li>
-                    <li class="contact online">
-                      <div class="profile-img">
-                        <img src="https://mighty.tools/mockmind-api/content/human/70.jpg" alt="">
-                      </div>
-                      <div class="profile-details">
-                        <div class="name">Jane Doe</div>
-                        <div class="details">
-                          Lorem ipsum dolor, sit amet consectetur.
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
+                    <div class="heading">Active Now</div>
+                      <ul class="contacts">
+                          <li class="contact online">
+                            <div class="profile-img">
+                              <img src="https://mighty.tools/mockmind-api/content/human/69.jpg" alt="">
+                            </div>
+                            <div class="profile-details">
+                              <div class="name">John Doe</div>
+                              <div class="details">
+                                Lorem ipsum dolor, sit amet consectetur.
+                              </div>
+                            </div>
+                          </li>
+                          <li class="contact online">
+                            <div class="profile-img">
+                              <img src="https://mighty.tools/mockmind-api/content/human/70.jpg" alt="">
+                            </div>
+                            <div class="profile-details">
+                              <div class="name">Jane Doe</div>
+                              <div class="details">
+                                Lorem ipsum dolor, sit amet consectetur.
+                              </div>
+                            </div>
+                          </li>
+                      </ul>
                 </div> 
               <!-- Active chat list end -->
 
               <!-- Inactive chat list start -->
                 <div class="idle">
-                  <div class="heading">Recent Active Profile</div>
-                    <ul class="contacts">
-                      <li class="contact">
-                        <div class="profile-img">
-                          <img src="https://mighty.tools/mockmind-api/content/human/71.jpg" alt="">
-                        </div>
-                        <div class="profile-details">
-                          <div class="name">Ruby Doe</div>
-                          <div class="details">
-                            Lorem ipsum dolor, sit amet consectetur.
-                          </div>
-                        </div>
-                      </li>
-                      <li class="contact">
-                        <div class="profile-img">
-                          <img src="https://mighty.tools/mockmind-api/content/human/72.jpg" alt="">
-                        </div>
-                        <div class="profile-details">
-                          <div class="name">Mark Doe</div>
-                          <div class="details">
-                            Lorem ipsum dolor, sit amet consectetur.
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+                    <div class="heading">Recent Active Profile</div>
+                        <ul class="contacts">
+                            <li class="contact">
+                              <div class="profile-img">
+                                <img src="https://mighty.tools/mockmind-api/content/human/71.jpg" alt="">
+                              </div>
+                              <div class="profile-details">
+                                <div class="name">Ruby Doe</div>
+                                <div class="details">
+                                  Lorem ipsum dolor, sit amet consectetur.
+                                </div>
+                              </div>
+                            </li>
+                            <li class="contact">
+                              <div class="profile-img">
+                                <img src="https://mighty.tools/mockmind-api/content/human/72.jpg" alt="">
+                              </div>
+                              <div class="profile-details">
+                                <div class="name">Mark Doe</div>
+                                <div class="details">
+                                  Lorem ipsum dolor, sit amet consectetur.
+                                </div>
+                              </div>
+                            </li>
+                        </ul>
+                </div>
               <!-- Inactive chat list end -->
+                  <div class = "NoRecordMsg" id="noRecordMessagerecent" style="display: none;">No records found</div>
             </div>
           </div>
+          <!-- recent tab end -->
+
+          <!-- group tab -->
           <div class="tab" data-name="groups">
             <h4 class="heading">Groups</h4>
+            <div  class = "NoRecordMsg" id="noRecordMessagegroups" style="display: none;">No records found</div>
           </div>
-
-          <div class="tab" data-name="groups">groups</div>
-         
+          <!-- group tab end -->
+          
+          <!-- contacts tab -->
           <div class="tab" data-name="contacts">
             <h4 class="heading">All contacts</h4>
-            <div class="contacts" id="contact-list">
+            <div class="contacts" id="contacts-list">
+      
             </div>
+            <div  class = "NoRecordMsg" id="noRecordMessagecontacts" style="display: none;">No records found</div>
           </div>
+          <!-- contacts tab end -->
+
          </div>
        <!-- tabs section end -->
       
