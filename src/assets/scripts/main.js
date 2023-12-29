@@ -4,11 +4,13 @@ import './tabs'
 import Contact from './contacts'
 import { faker } from '@faker-js/faker'
 import '../styles/components/contacts.scss'
+import './delete'
 
 let contacts = [];
 for (let i = 0; i< 10; i++){
     contacts.push (
        new Contact(
+        new Date().getTime(),
         faker.person.firstName(),
         faker.person.lastName(),
         faker.phone.number(),
@@ -33,7 +35,40 @@ contacts.forEach(contact =>{
                           ${contact.number}
                         </div>
                       </div>
+                        <button id="deleteBtn" class="deleteBtn"  ><i class="ri-delete-bin-6-line" data-contact-id="${contact.id}"></i></button>
         </li>
     `
 })
 contactList.innerHTML = contactHTML
+console.log(contacts)
+
+
+// delete function
+const deleteBtn = document.getElementById('deleteBtn');
+deleteBtn.addEventListener('click', function (event) {
+  if (event.target.classList.contains('ri-delete-bin-6-line')) {
+      const contactId = event.target.getAttribute('data-contact-id');
+      // console.log(contactId);
+      if (contactId) {
+        // console.log(contactId)
+          delete_contact(contactId);
+      }
+  }
+});
+
+// delete function
+function delete_contact(id){
+  contacts = contacts.filter(contact => {
+      return contact.id != id;
+  });
+  const rowToRemove = document.getElementById(id);
+  if (rowToRemove && confirm("Are you sure ?")) {
+      // rowToRemove.parentElement.removeChild(rowToRemove);
+      console.log(rowToRemove);
+      alert('delete')
+  }
+  // saveTaskToLocalStorage();
+}
+
+
+
