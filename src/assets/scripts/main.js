@@ -37,6 +37,7 @@ contacts.forEach(contact => {
                           ${contact.number}
                         </div>
                       </div>
+                        <button id="deleteBtn" class="deleteBtn"><i class="ri-delete-bin-6-line" data-contact-id="${contact.number}"></i></button>
         </li>
     `
 })
@@ -81,4 +82,26 @@ function loadRecentContacts(contacts) {
 }
 loadRecentContacts(contacts);
 
+// delete functionality start
+document.addEventListener('click', function (event) {
+  if (event.target.classList.contains('ri-delete-bin-6-line')) {
+    const contactId = event.target.getAttribute('data-contact-id');
+    if (contactId) {
+      delete_contact(contactId);
+    }
+  }
+});
+
+
+function delete_contact(id) {
+  contacts = contacts.filter(contact => {
+    return contact.id != id;
+  });
+  const rowToRemove = document.getElementById(id);
+  if (rowToRemove && confirm("Are you sure ?")) {
+    rowToRemove.parentElement.removeChild(rowToRemove);
+    console.log(rowToRemove);
+  }
+}
+// delete functionality end
 
