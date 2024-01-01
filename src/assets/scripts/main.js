@@ -56,7 +56,7 @@ function loadRecentContacts(contacts) {
         <img src="${contact.picture}" alt="">
       </div>
       <div class="profile-details">
-        <div class="name">${contact.getfullName()}</div>
+        <div class="name">${contact.getFullName()}</div>
         <div class="details">
         ${contact.number}
         </div>
@@ -68,7 +68,7 @@ function loadRecentContacts(contacts) {
         <img src="${contact.picture}" alt="">
       </div>
       <div class="profile-details">
-        <div class="name">${contact.getfullName()}</div>
+        <div class="name">${contact.getFullName()}</div>
         <div class="details">
         ${contact.number}
         </div>
