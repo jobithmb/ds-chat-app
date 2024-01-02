@@ -1,7 +1,9 @@
-.tabs{
-    .tab{
-        display:none;
-        min-height: 500px; 
+.tabs {
+  height: calc(100vh - 12.8rem);
+  overflow-y: auto;
+  .tab {
+      display: none;
+        // min-height: 500px; 
         &.active{
           display: block;    
         }
