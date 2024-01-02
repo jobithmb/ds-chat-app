@@ -30,6 +30,7 @@
         align-items: center;
         gap: 10px;
         padding: 5px 3px 0px 10px;
+        cursor: pointer;
         &.online {
             .profile-img::after {
                 background-color: greenyellow;
@@ -74,6 +75,7 @@
             font-weight: 200;
             outline: none;
             border: none;
+            cursor: pointer;
         }
         .deleteBtn:hover{
             transform: scale(1.1);
