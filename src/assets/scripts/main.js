@@ -56,7 +56,7 @@ contacts.forEach(contact => {
               
               function delete_contact(id){
                 contacts = contacts.filter(contact => {
-                    return contact.id != id;
+                    return contact.number !== id;
                 });
                 const rowToRemove = document.getElementById(id);
                 if (rowToRemove && confirm("Are you sure ?")) {
