@@ -10,11 +10,11 @@
     }
     .contacts{
         list-style-type: none;
-        .details{
+        .profile-details{
             font-size: 13px;
             color: #ffffffb4;
         }
-        .details:active{
+        .profile-details:active{
             color: #2F835F;
 
         }
@@ -63,9 +63,9 @@
                 font-weight: 500;
                 font-size: 14px;
             }
-            .number {
+            .details {
                 font-size: 12px;
-                color: #ffffffb4;
+                color: #ffffffc3;
             }
         }
         .deleteBtn{
@@ -87,12 +87,14 @@
     .contact:hover{
         background-color: #ffffff18;
         border-radius: 35px;
+        color: #2F835F;
     }
     .contact:active{
         background-color: #ffffffe4;
+        color: #2F835F ;
         .profile-details{
             color: #2F835F ;
-            .number{
+            .details{
                 color: #2F835F ;
             }
         }

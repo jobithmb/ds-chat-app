@@ -1,0 +1,26 @@
+.contacts{
+    .contact.current{
+        background-color: #ffffff;
+        border-radius: 30px;
+        .profile-details{
+            .name{
+                color: #2F835F ;
+
+            }
+            .details{
+                color: #2F835F ;
+            }
+        }
+        .deleteBtn{
+            color: #2F835F ;
+            cursor: pointer;
+        }
+    }
+    .contact.current:hover{
+        background-color: #ffffffeb;
+    }
+    .contact.current:active{
+        background-color: #fffffff0;
+    }
+}
+
