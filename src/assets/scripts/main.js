@@ -24,6 +24,7 @@ contacts.sort((a, b) => a.firstName.localeCompare(b.firstName))
 const contactList = document.getElementById('contacts-list')
 
 // Dynamic contacts in contacts tab
+function renderingContacts(contacts){
 let contactHTML = '';
 contacts.forEach(contact => {
   contactHTML += `
@@ -42,32 +43,30 @@ contacts.forEach(contact => {
                   `
               })
               contactList.innerHTML = contactHTML
+            }
+            renderingContacts(contacts);
               
-              // delete functionality start
-              document.addEventListener('click', function (event) {
-                if (event.target.classList.contains('ri-delete-bin-6-line')) {
-                    const contactId = event.target.getAttribute('data-contact-id');
-                    if (contactId) {
-                        delete_contact(contactId);
-                    }
-                }
-              });
+// delete functionality start
+document.addEventListener('click', function (event) {
+if (event.target.classList.contains('ri-delete-bin-6-line')) {
+  const contactId = event.target.getAttribute('data-contact-id');
+  if (contactId) {
+    deleteContact(contactId);
+  }
+  }
+});
               
-              
-              function delete_contact(id){
-                contacts = contacts.filter(contact => {
-                    return contact.number !== id;
-                });
-                const rowToRemove = document.getElementById(id);
-                if (rowToRemove && confirm("Are you sure ?")) {
-                    rowToRemove.parentElement.removeChild(rowToRemove);
-                    console.log(rowToRemove);
-                }
-              }
-              // delete functionality end
+ function deleteContact(id) {
+  const index = contacts.findIndex((contact) => contact.number === id);
+  if (index !== -1 && confirm('Do you want to delete this contact?')) {
+    contacts.splice(index, 1);
+    loadRecentContacts(contacts);
+    renderingContacts(contacts);
+  }
+}
+// delete functionality end
 
 function loadRecentContacts(contacts) {
-  console.log('inn')
   const contactsOnline = document.getElementById('active-contacts');
   const contactsOffline = document.getElementById('idle-contacts');
   let contactsOnlineHTML = ``;
@@ -108,129 +107,128 @@ loadRecentContacts(contacts);
 
 
 
-// display function
-let chatContacts = document.querySelectorAll('.contact'); //node list
-let chatContactArr = Array.from(chatContacts); //contact array
-// console.log(chatContactArr);
-chatContactArr.forEach(chatContact=>{
-  // click event for each contact
-  chatContact.addEventListener('click', (e)=>{
-    chatContactArr.forEach(contact=>contact.classList.remove('current'));
-    chatContact.classList.add('current');
-    let contactId = chatContact.id;
-    let contact = contacts.find(contact => contact.number === contactId);
-    // console.log(contact)
-    if(contact){
-      let mainContent = document.querySelector('.main-content')
-      let contactHTML = '';
-      contactHTML += `
-      <!-- Chat header start -->
-      <div class="chat-header">
-          <div class="profile">
+// display chat on click of contact 
+  let chatContacts = document.querySelectorAll('.contact'); //node list
+  let chatContactArr = Array.from(chatContacts); //contact array
+  // console.log(chatContactArr);
+  chatContactArr.forEach(chatContact=>{
+    // click event for each contact
+    chatContact.addEventListener('click', (e)=>{
+      chatContactArr.forEach(contact=>contact.classList.remove('current'));
+      chatContact.classList.add('current');
+      let contactId = chatContact.id;
+      let contact = contacts.find(contact => contact.number === contactId);
+      // console.log(contact)
+      if(contact){
+        let mainContent = document.querySelector('.main-content')
+        let contactHTML = '';
+        contactHTML += `
+        <!-- Chat header start -->
+        <div class="chat-header">
+            <div class="profile">
+                <div class="profile-img">
+                  <img src=${contact.picture} alt ='image'/>
+                </div>
+                <div class="name">
+                    <p>${contact.getFullName()}</p>
+                </div>
+            </div>
+            <div class="options">
+              <div class="calls">
+                  <div class="video-call main-icon">
+                    <i class="ri-video-chat-line"></i>
+                </div>
+                  <div class="voice-call main-icon">
+                      <i class="ri-phone-line"></i>
+                  </div>
+                  <div class="group-call main-icon">
+                      <i class="ri-group-line"></i>
+                  </div>
+              </div>
+              <div class="more-option">
+                <i class="ri-more-2-fill"></i>
+              </div>
+            </div>
+  
+        </div>
+      <!-- chat header end -->
+  
+        <!-- chat-content start -->
+        <div class="chat-box">
+          <div class="incoming-msg">
               <div class="profile-img">
-                <img src=${contact.picture} alt ='image'/>
+                <img src=${contact.picture} alt ='image' />
               </div>
-              <div class="name">
-                  <p>${contact.getFullName()}</p>
+              <div class="message">
+                <p>Lorem ipsum dolor sit amet consecteture </p>
+              </div>
+              <div class="time">
+                <p>12:30 am</p>
+              </div>
+          </div>  
+  
+          <div class="outgoing-msg">
+              <div class="time">
+                <p>12:32 am</p>
+              </div>
+              <div class="message">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reiciendis harum voluptatibus assumenda commodi expedita deleniti? </p>
+              </div>
+              <div class="profile-img">
+                <img src="https://mighty.tools/mockmind-api/content/human/7.jpg" alt ='image' />
+              </div>
+          </div> 
+  
+          <div class="incoming-msg">
+              <div class="profile-img">
+                <img src=${contact.picture} alt ='image' />
+              </div>
+              <div class="message">
+                <p>Lorem ipsum dolor sit amet consecteture </p>
+              </div>
+              <div class="time">
+                <p>12:34 am</p>
               </div>
           </div>
-          <div class="options">
-            <div class="calls">
-                <div class="video-call main-icon">
-                  <i class="ri-video-chat-line"></i>
-              </div>
-                <div class="voice-call main-icon">
-                    <i class="ri-phone-line"></i>
-                </div>
-                <div class="group-call main-icon">
-                    <i class="ri-group-line"></i>
-                </div>
-            </div>
-            <div class="more-option">
-              <i class="ri-more-2-fill"></i>
-            </div>
-          </div>
-
-      </div>
-    <!-- chat header end -->
-
-      <!-- chat-content start -->
-      <div class="chat-box">
-        <div class="incoming-msg">
-            <div class="profile-img">
-              <img src=${contact.picture} alt ='image' />
+  
+          <div class="outgoing-msg">
+            <div class="time">
+              <p>12:35 am</p>
             </div>
             <div class="message">
-              <p>Lorem ipsum dolor sit amet consecteture </p>
-            </div>
-            <div class="time">
-              <p>12:30 am</p>
-            </div>
-        </div>  
-
-        <div class="outgoing-msg">
-            <div class="time">
-              <p>12:32 am</p>
-            </div>
-            <div class="message">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reiciendis harum voluptatibus assumenda commodi expedita deleniti? </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reiciendis harum </p>
             </div>
             <div class="profile-img">
               <img src="https://mighty.tools/mockmind-api/content/human/7.jpg" alt ='image' />
             </div>
         </div> 
-
+  
         <div class="incoming-msg">
-            <div class="profile-img">
-              <img src=${contact.picture} alt ='image' />
-            </div>
-            <div class="message">
-              <p>Lorem ipsum dolor sit amet consecteture </p>
-            </div>
-            <div class="time">
-              <p>12:34 am</p>
-            </div>
+              <div class="profile-img">
+                <img src=${contact.picture} alt ='image' />
+              </div>
+              <div class="message">
+                <p>Lorem ipsum dolor sit amet consecteture </p>
+              </div>
+              <div class="time">
+                <p>12:37 am</p>
+              </div>
         </div>
-
+      
         <div class="outgoing-msg">
-          <div class="time">
-            <p>12:35 am</p>
-          </div>
           <div class="message">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reiciendis harum </p>
+            <p>Typing... </p>
           </div>
           <div class="profile-img">
             <img src="https://mighty.tools/mockmind-api/content/human/7.jpg" alt ='image' />
           </div>
-      </div> 
+        </div> 
+  
+     </div>
+   <!-- chat-content end -->
+        `;
+      mainContent.innerHTML = contactHTML;
+    }
+  })
+  })
 
-      <div class="incoming-msg">
-            <div class="profile-img">
-              <img src=${contact.picture} alt ='image' />
-            </div>
-            <div class="message">
-              <p>Lorem ipsum dolor sit amet consecteture </p>
-            </div>
-            <div class="time">
-              <p>12:37 am</p>
-            </div>
-      </div>
-    
-      <div class="outgoing-msg">
-        <div class="message">
-          <p>Typing... </p>
-        </div>
-        <div class="profile-img">
-          <img src="https://mighty.tools/mockmind-api/content/human/7.jpg" alt ='image' />
-        </div>
-      </div> 
-
-   </div>
- <!-- chat-content end -->
-      `;
-   
-    mainContent.innerHTML = contactHTML;
-      
-  }
-})
-})
