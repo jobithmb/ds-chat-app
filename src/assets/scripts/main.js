@@ -62,6 +62,7 @@ if (event.target.classList.contains('ri-delete-bin-6-line')) {
     contacts.splice(index, 1);
     loadRecentContacts(contacts);
     renderingContacts(contacts);
+    displayChat(contacts);
   }
 }
 // delete functionality end
@@ -108,6 +109,7 @@ loadRecentContacts(contacts);
 
 
 // display chat on click of contact 
+function displayChat(contacts){
   let chatContacts = document.querySelectorAll('.contact'); //node list
   let chatContactArr = Array.from(chatContacts); //contact array
   // console.log(chatContactArr);
@@ -231,4 +233,6 @@ loadRecentContacts(contacts);
     }
   })
   })
-
+}
+displayChat(contacts)
+ 
