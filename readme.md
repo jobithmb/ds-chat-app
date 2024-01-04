@@ -15,10 +15,10 @@ https://dribbble.com/shots/5879532-Website-Chat-Design/attachments/11100847?mode
 #### Member-3: Susheela R
 * Chat content header(CSS)
 #### Member-4: Bhavya Shree
-* Chat content header(HTML), chat content(HTML,CSS), Tab swapping functionality.
+* Chat content header(HTML), chat content(HTML,CSS), Tab swapping functionality, Search functionality.
 #### Member-5: Melza Geno
-* Chat-list content(HTML), Rendering Contacts using faker, delete functionality.
+* Chat-list content(HTML), Rendering Contacts using faker, Delete functionality, Display chat of clicked contact.
 #### Member-6: Georgin Reji
-* Add functionality
+* Adding contacts
 #### Member-7: Akil Varghese
-* Contact Sort functionality
+* Contacts sort functionality
